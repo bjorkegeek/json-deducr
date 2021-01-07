@@ -1,0 +1,40 @@
+{
+  "name": "json-deducr-decoder",
+  "version": "1.0.0",
+  "description": "JSON Deduplicating Compressed Representation Decoder",
+  "homepage": "https://github.com/bjorkegeek/json-deducr",
+  "main": "lib/json-deducr-decoder.js",
+  "types": "lib/json-deducr-decoder.d.ts",
+  "scripts": {
+    "test": "jest --coverage",
+    "lint": "eslint . --ext .ts",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "test": "jest",
+  "author": "David Björkevik",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^26.0.14",
+    "@typescript-eslint/eslint-plugin": "^4.1.1",
+    "@typescript-eslint/parser": "^4.1.1",
+    "eslint": "^7.9.0",
+    "jest": "^26.4.2",
+    "prettier": "^2.1.2",
+    "ts-jest": "^26.4.0",
+    "typescript": "^4.0.3"
+  },
+  "peerDependencies": {},
+  "files": [
+    "lib/**",
+    "src/**/*.ts"
+  ],
+  "keywords": [
+    "RxJS"
+  ]
+}
