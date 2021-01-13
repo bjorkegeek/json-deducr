@@ -56,7 +56,7 @@ function doDecode(
         `Invalid input data: Encoded value for ${key} not found!`
       );
     }
-    if (typeof encodedValue !== 'object') {
+    if (typeof encodedValue !== "object") {
       decodedValue = encodedValue;
     } else {
       decodedValue = doDecode(encodedValue, encodedValues, decodedValues);
