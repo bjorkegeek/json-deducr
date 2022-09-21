@@ -1,6 +1,6 @@
 {
   "name": "json-deducr-decoder",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "JSON Deduplicating Compressed Representation Decoder",
   "homepage": "https://github.com/bjorkegeek/json-deducr",
   "main": "lib/json-deducr-decoder.js",

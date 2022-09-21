@@ -43,7 +43,9 @@ function doDecode(
   } else if (typeof key !== "string") {
     return key;
   } else {
-    if (key.startsWith(".") && key !== ".") {
+    if (key === "") {
+      return "";
+    } else if (key.startsWith(".") && key !== ".") {
       return key.slice(1);
     }
     let decodedValue = decodedValues[key];
