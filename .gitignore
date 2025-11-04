@@ -1,3 +1,6 @@
 npm/decoder/node_modules
 npm/decoder/lib
 npm/decoder/coverage
+npm/encoder/node_modules
+npm/encoder/lib
+npm/encoder/coverage
