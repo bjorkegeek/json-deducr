@@ -1,5 +1,5 @@
-import { dedup } from "./dedup";
-import { JsonObject, JsonValue } from "./types";
+import { dedup } from "./dedup.js";
+import { JsonObject, JsonValue } from "./types.js";
 
 /**
  * Encodes any JSON object into json-deducr format

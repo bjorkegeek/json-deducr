@@ -1,6 +1,6 @@
 {
   "name": "json-deducr-encoder",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "JSON Deduplicating Compressed Representation Encoder",
   "homepage": "https://github.com/bjorkegeek/json-deducr",
   "license": "MIT",

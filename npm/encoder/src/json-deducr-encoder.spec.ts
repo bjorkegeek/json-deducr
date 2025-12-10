@@ -23,7 +23,7 @@ describe("encode function", () => {
     );
   });
   test("Trivial values", () => {
-    expect(encode("scoop")).deep.equals({".": "scoop"});
-    expect(encode(null)).deep.equals({".": null});
+    expect(encode("scoop")).deep.equals({ ".": "scoop" });
+    expect(encode(null)).deep.equals({ ".": null });
   });
 });

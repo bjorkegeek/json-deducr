@@ -1,2 +1,2 @@
-export { encode } from "./json-deducr-encoder";
-export * from "./types";
+export { encode } from "./json-deducr-encoder.js";
+export * from "./types.js";
