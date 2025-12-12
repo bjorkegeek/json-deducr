@@ -27,9 +27,11 @@ describe("encode function", () => {
       readFileSync(`${__dirname}/../../../test-data/original.json`, "utf8"),
     );
     original["injectedUndefined"] = undefined;
+    original["data"][0]["deepUndefined"] = undefined;
     const encoded = encode(original);
     const decoded = decode(encoded);
     expect(decoded["injectedUndefined"]).equals(undefined);
+    expect(decoded["data"][0]["deepUndefined"]).equals(undefined);
   });
   test("Trivial values", () => {
     expect(encode("scoop")).deep.equals({ ".": "scoop" });

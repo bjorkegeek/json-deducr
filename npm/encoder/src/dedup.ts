@@ -6,6 +6,8 @@ import equal from "fast-deep-equal";
  * Performs a deep deduplication of a JSON value.
  * The returned value will be deep equal to the provided one,
  * but all equal objects in the tree will share the same instance.
+ *
+ * This function will remove any "undefined" values
  */
 export function dedup(v: JsonValue): JsonValue {
   const memo = new Map<object, JsonValue>();
@@ -44,7 +46,9 @@ export function dedup(v: JsonValue): JsonValue {
     } else {
       const ret: JsonObject = {};
       for (const k of Object.keys(v)) {
-        ret[k] = canonicalize(v[k]);
+        if (v[k] !== undefined) {
+          ret[k] = canonicalize(v[k]);
+        }
       }
       return ret;
     }
