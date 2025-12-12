@@ -75,11 +75,13 @@ function encodeValueWorker(
   }
   const ret = {} as JsonObject;
   for (const [key, subValue] of Object.entries(value)) {
-    ret[encodeValueWorker(key, reverseMap, false)] = encodeValueWorker(
-      subValue,
-      reverseMap,
-      false,
-    );
+    if (subValue !== undefined) {
+      ret[encodeValueWorker(key, reverseMap, false)] = encodeValueWorker(
+        subValue,
+        reverseMap,
+        false,
+      );
+    }
   }
   return ret;
 }
